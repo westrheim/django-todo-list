@@ -1,0 +1,14 @@
+
+{% if request.user == task.user %}
+    <h1>Task: {{task.title}}</h1>
+
+    <p>This is the detail page for </p>
+    {{task.title}}
+    <ul>
+        <li>Timestamp = {{task.create}}</li>
+        <li>Is complete = {{task.complete}}</li>
+        <li>Created by = {{task.user}}</li>
+    </ul>
+{% else %}
+    <p>Task not found</p>
+{% endif%}
